@@ -1,4 +1,4 @@
-/* Variables CSS para fácil edición de colores */
+2c2777cb1009e444ebdd1a247bae189b758c1ae8 Variables CSS para fácil edición de colores */
 :root {
     --primary-color: #e94560; /* Color principal (rojo/rosa) */
     --secondary-color: #0f3460; /* Color secundario (azul oscuro) */
