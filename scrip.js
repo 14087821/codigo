@@ -1,4 +1,72 @@
-/* Esto va DENTRO del archivo style.css */
+// Esto va DENTRO del archivo scrip.js
+// Variables del juego
+let hashCount = 0;
+let hashPerClick = 1;
+let hashPerSecond = 1;
+let upgradeCost = 1000;
+let upgradeLevel = 0;
+
+// Elementos del DOM
+const hashCountEl = document.getElementById('hash-count');
+const hashPerSecondEl = document.getElementById('hash-per-second');
+const clickButton = document.getElementById('click-button');
+const upgradeButton = document.getElementById('upgrade-button');
+const withdrawLink = document.getElementById('withdraw-link');
+
+// 1. Lógica del Click
+clickButton.addEventListener('click', () => {
+    hashCount += hashPerClick;
+    updateDisplay();
+});
+
+// 2. Lógica de la Mejora (Comprar Miner PSP 45S)
+function buyUpgrade() {
+    if (hashCount >= upgradeCost) {
+        hashCount -= upgradeCost;
+        upgradeLevel++;
+
+        // Aumentar la tasa pasiva y el costo
+        hashPerSecond *= 5; 
+        hashPerClick *= 2; 
+        upgradeCost *= 10; 
+        
+        // Actualizar el texto del botón
+        if (upgradeLevel < 4) { 
+            upgradeButton.textContent = `Comprar Nivel ${upgradeLevel + 1} - Costo: ${upgradeCost.toLocaleString()} H`;
+        } else {
+            upgradeButton.textContent = `MINER PSP 45S MAX. ¡A minar Satoshis!`;
+            upgradeButton.disabled = true;
+        }
+        
+        updateDisplay();
+        checkWithdrawalStatus();
+    } else {
+        alert("¡Necesitas más Puntos de Hash para el Miner PSP 45S!");
+    }
+}
+
+// 3. Lógica Pasiva (Idle/Automática)
+setInterval(() => {
+    hashCount += hashPerSecond;
+    updateDisplay();
+}, 1000); // Se ejecuta cada 1 segundo
+
+// 4. Actualizar la Interfaz
+function updateDisplay() {
+    hashCountEl.textContent = hashCount.toLocaleString();
+    hashPerSecondEl.textContent = hashPerSecond.toLocaleString();
+}
+
+// 5. Mostrar el Link de Retiro de BTC (La parte de la ganancia)
+function checkWithdrawalStatus() {
+    const WITHDRAWAL_UNLOCK_THRESHOLD = 100000; // Umbral de 100k
+    if (hashCount >= WITHDRAWAL_UNLOCK_THRESHOLD) {
+        withdrawLink.style.display = 'block'; // Mostrar el enlace
+    }
+}
+
+// Inicializar el juego
+updateDisplay();/* Esto va DENTRO del archivo style.css */
 body {
     font-family: sans-serif;
     text-align: center;
