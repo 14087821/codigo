@@ -1,4 +1,5 @@
-// Esto va DENTRO del archivo scrip.js
+Etiqueta,Ubicación enindex.html
+"<link rel=""stylesheet"" href=""style.css"">",Dentro del <head>// Esto va DENTRO del archivo scrip.js
 // Variables del juego
 let hashCount = 0;
 let hashPerClick = 1;
