@@ -1,4 +1,9 @@
-2c2777cb1009e444ebdd1a247bae189b758c1ae8 Variables CSS para fácil edición de colores */
+Nivel de Mejora,Costo (Puntos de Hash),Hash por Segundo (Pasivo),Descripción Temática
+Básico,0,1 H/s,El clic manual.
+Nivel 1,1000,5 H/s,Instalando el Chipset 'P'.
+Nivel 2,5000,25 H/s,"Refrigeración 'S', + ventilación."
+Nivel 3,20000,100 H/s,¡Overclocking del Núcleo 45S!
+Nivel 4,100000,500 H/s,Activando la Red de Faucet.c2777cb1009e444ebdd1a247bae189b758c1ae8 Variables CSS para fácil edición de colores */
 :root {
     --primary-color: #e94560; /* Color principal (rojo/rosa) */
     --secondary-color: #0f3460; /* Color secundario (azul oscuro) */
