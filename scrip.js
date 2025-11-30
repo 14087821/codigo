@@ -1,4 +1,37 @@
-Nivel de Mejora,Costo (Puntos de Hash),Hash por Segundo (Pasivo),Descripción Temática
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Miner PSP 45S</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="game-container">
+        <div id="stats">
+            <h2>Puntos de Hash: <span id="hash-count">0</span></h2>
+            <p>Generación Pasiva: <span id="hash-per-second">1</span> H/s</p>
+        </div>
+
+        <button id="click-button">
+            💰 MINAR BITCOIN 💰
+        </button>
+
+        <div id="upgrades">
+            <h3>Terminal de Mejoras (PSP 45S)</h3>
+            <button id="upgrade-button" onclick="buyUpgrade()">
+                Comprar PSP 45S (Nivel 1) - Costo: 1000 H
+            </button>
+        </div>
+
+        <div id="faucet-link">
+            <p>¡Alcanza 100000 Puntos para activar el retiro de Satoshis reales!</p>
+            <a href="TU_ENLACE_A_FAUCET_O_SITIO_DE_RETIRO.com" id="withdraw-link" style="display:none;">**💸 RETIRAR SATOSHIS**</a>
+        </div>
+    </div>
+    
+    <script src="scrip.js"></script> 
+</body>
+</html>Nivel de Mejora,Costo (Puntos de Hash),Hash por Segundo (Pasivo),Descripción Temática
 Básico,0,1 H/s,El clic manual.
 Nivel 1,1000,5 H/s,Instalando el Chipset 'P'.
 Nivel 2,5000,25 H/s,"Refrigeración 'S', + ventilación."
