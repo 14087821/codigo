@@ -1,4 +1,41 @@
-<!DOCTYPE html>
+/* Esto va DENTRO del archivo style.css */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #1a1a2e; /* Fondo oscuro, estilo "gamer" */
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+#game-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #ffaa00; /* Borde naranja/oro */
+    border-radius: 15px;
+}
+
+#click-button {
+    font-size: 24px;
+    padding: 15px 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: #ffaa00;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.1s;
+}
+
+#click-button:active {
+    background-color: #e09500;
+}
+
+#upgrades, #stats {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ffaa00;
+}<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
